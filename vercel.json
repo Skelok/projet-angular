@@ -2,8 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/mac_donald/**/*",
-      "use": "@vercel/static"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/mac_donald"
+      }
     }
   ],
   "routes": [
