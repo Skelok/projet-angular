@@ -1,0 +1,74 @@
+.searchAndSelect{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 100;
+    margin-left: 50px;
+    margin-top: 5px;
+    backdrop-filter: blur(1px);
+    width: 250px;
+}
+
+.area-block{
+    background-color: rgba($color: white, $alpha: 0.75);
+    align-items: center;
+    vertical-align: center;
+    justify-content: center;
+}
+
+.place-follower{
+    background-color: rgba($color: white, $alpha: 0.75);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.first-line{
+    display: flex;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.area-form{
+    display: block;
+    padding: 10px;
+    border-radius: 30%;
+}
+
+input, .suggestion-case{
+    border-radius: 5px;
+    border: solid grey 2px
+}
+
+.search-issue{
+    font-size: 12px;
+    color: red;
+    p{
+        margin-top : 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.address{
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    img{
+        width: 70%;
+        height: 70%;
+    }    
+}
+
+.area-button{
+    display: flex;
+}
+
+.suggestion-case{
+    background-color: white;
+    padding : 5px;
+    text-align: left;
+    font-weight: 500;
+}

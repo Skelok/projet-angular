@@ -1,0 +1,15 @@
+<div class="data">
+    <ng-container *ngIf=" selectedRestaurant; else noSelection">
+        <div class="selection">
+            <h1>{{ selectedRestaurant.title }}</h1>
+            <button id="close" (click)="closeDetails()">X</button>
+            <p>{{ selectedRestaurant.details }}</p>
+            <button id="continue">Continuer</button>
+        </div>
+    </ng-container>
+    <ng-template #noSelection>
+        <div class="unselect">
+            <h1>Aucun restaurant sélectionné</h1>
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,31 @@
+<div class="searchAndSelect">
+    <!-- Gestion du formulaire -->
+    <div class="area-block">
+        <form class="area-form" [formGroup]="placeForm" (ngSubmit)="showAddress()">
+            <label for="address"  class="first-line">Rechercher un restaurant</label>
+            <div class="area-button">
+                <input
+                    [ngStyle]="{border: 'solid ' + alarm + ' 2px'}"
+                    type="text" id="address" formControlName="address">
+                <button class="address" type="submit"><img src="assets/loupe.png" alt="Loupe"></button>
+            </div>
+            <div class="search-issue" *ngIf="(alarm === 'red')">
+                <p>Recherche invalide</p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Gestion des suggestions -->
+    <div *ngFor="let place of (nomServices.placeToSearch$ | async)">
+        <div class="place-follower">
+                <button class="suggestion-case" (click)="getAddress(place)">
+                    <span style="font-weight: 600;">{{ getPlaceAddress(place.address) }}</span>,
+                        {{ place.address.state }}
+                        @if(place.address.postcode){
+                            {{ place.address.postcode}}
+                        }
+                        {{ place.address.country }}
+                </button>
+            </div>
+    </div>
+</div>

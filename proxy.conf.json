@@ -1,0 +1,10 @@
+{
+    "/nominatim": {
+        "target": "http://nominatim.openstreetmap.org",
+        "secure": true,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/nominatim": ""
+        }
+    }
+}
