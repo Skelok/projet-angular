@@ -39,6 +39,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/mac_donald",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -59,6 +60,7 @@
               "node_modules/leaflet/dist/leaflet.css"
             ]
           },
+          
           "configurations": {
             "production": {
               "budgets": [
