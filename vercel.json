@@ -5,14 +5,12 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist/mac_donald"
+        "distDir": "dist/mac_donald/browser"
       }
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/dist/mac_donald/index.html"
-    }
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }
